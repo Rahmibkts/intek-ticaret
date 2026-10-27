@@ -1,0 +1,12 @@
+{
+  "name": "intek-ticaret",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Intek Ticaret statik site - Cloudflare Pages",
+  "scripts": {
+    "deploy": "wrangler pages deploy dist --project-name=intek-ticaret --branch=main --commit-dirty=true"
+  },
+  "devDependencies": {
+    "wrangler": "^4.53.0"
+  }
+}

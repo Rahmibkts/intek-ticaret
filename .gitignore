@@ -26,3 +26,7 @@ hermes-github*
 
 # Wrangler yerel cache (hesap bilgisi)
 .wrangler/
+
+# Node
+node_modules/
+package-lock.json
