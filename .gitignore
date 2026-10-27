@@ -1,0 +1,28 @@
+# Yerel arşiv / çalışma dosyaları — repoya girmesin
+yedek_*/
+ekran-goruntuleri/
+.freebuff/
+*.mp4
+_Niyazi*
+ChatGPT Image*.png
+
+# Çalışma kopyaları (dist üretiminde kullanılan ara dosyalar)
+_c_*.html
+_o_*.html
+_fa.html
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Sırlar
+.env
+*.key
+hermes-github*
+
+# Wrangler yerel cache (hesap bilgisi)
+.wrangler/

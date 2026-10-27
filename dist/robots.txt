@@ -1,0 +1,18 @@
+# İntek Ticaret — robots.txt
+# https://www.intekticaret.com
+
+User-agent: *
+Allow: /
+
+# Yedek klasörleri ve medya dosyaları indekslenmesin
+Disallow: /yedek_20260926/
+Disallow: /yedek_20261021/
+Disallow: /yedek_20261027/
+Disallow: /.freebuff/
+Disallow: /*.mp4$
+Disallow: /*.zip$
+Disallow: /_c_
+Disallow: /_o_
+Disallow: /_fa.html
+
+Sitemap: https://www.intekticaret.com/sitemap.xml
