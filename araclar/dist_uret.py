@@ -49,9 +49,13 @@ for f in ("favicon.svg", "robots.txt", "sitemap.xml"):
 
 imgdir = os.path.join(ROOT, "images")
 if os.path.isdir(imgdir):
-    for f in os.listdir(imgdir):
-        if f.lower().endswith((".png", ".jpg", ".jpeg", ".webp", ".svg", ".avif")):
-            shutil.copy2(os.path.join(imgdir, f), os.path.join(DIST, "images", f))
+    for base, _dirs, files in os.walk(imgdir):
+        rel = os.path.relpath(base, imgdir)
+        target = os.path.join(DIST, "images") if rel == "." else os.path.join(DIST, "images", rel)
+        os.makedirs(target, exist_ok=True)
+        for f in files:
+            if f.lower().endswith((".png", ".jpg", ".jpeg", ".webp", ".svg", ".avif")):
+                shutil.copy2(os.path.join(base, f), os.path.join(target, f))
 
 for p in PAGES:
     html = open(os.path.join(ROOT, p), encoding="utf-8").read()
