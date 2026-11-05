@@ -788,13 +788,11 @@ p { color: var(--gray); }
 .testimonial-card--featured .testimonial-avatar { background: var(--gold); color: var(--navy); }
 .testimonial-name { font-weight: 700; color: var(--navy); font-size: .95rem; }
 .testimonial-service { font-size: .78rem; color: var(--gray); }
-.testimonial-verified {
-  margin-left: auto; display: inline-flex; align-items: center; gap: 5px;
-  font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em;
-  color: #1f9d55; background: rgba(31,157,85,.1);
-  padding: 4px 9px; border-radius: 100px; white-space: nowrap;
+.testimonial-meta {
+  margin-left: auto; font-size: .7rem; color: var(--gray);
+  white-space: nowrap; opacity: .8;
 }
-.testimonial-card--featured .testimonial-verified { color: #7ee2a8; background: rgba(126,226,168,.14); }
+.testimonial-card--featured .testimonial-meta { color: rgba(255,255,255,.55); }
 
 .testimonials-cta {
   text-align: center; margin-top: 40px; padding-top: 32px;
