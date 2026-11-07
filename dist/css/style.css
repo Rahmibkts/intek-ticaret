@@ -369,6 +369,8 @@ p { color: var(--gray); }
   opacity: .78; text-transform: none;
 }
 .header-cta i { font-size: .8rem; opacity: .8; }
+.header-cta--single { font-size: .9rem; font-weight: 800; letter-spacing: .01em; padding: 10px 20px; }
+.header-cta--single i { font-size: .86rem; opacity: .9; }
 
 .hamburger {
   display: none; flex-direction: column; gap: 5px; padding: 8px;
@@ -980,14 +982,29 @@ p { color: var(--gray); }
 
 .about-image {
   position: relative; border-radius: var(--radius-lg);
-  overflow: hidden; aspect-ratio: 4 / 3.4;
+  overflow: hidden; aspect-ratio: 4 / 3;
   box-shadow: var(--shadow-lg);
-  display: flex; align-items: center; justify-content: center;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(201,168,76,.18), transparent 62%),
-    linear-gradient(145deg, var(--navy-mid), var(--navy));
+  background: var(--navy);
 }
-.about-image img { width: 100%; height: 100%; object-fit: cover; }
+.about-image picture { display: block; width: 100%; height: 100%; }
+.about-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s ease; }
+.about-image:hover img { transform: scale(1.04); }
+.about-image-cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 3;
+  display: flex; align-items: center; gap: 12px;
+  padding: 46px 22px 20px;
+  background: linear-gradient(to top, rgba(10,22,40,.94), rgba(10,22,40,.5) 55%, transparent);
+  color: var(--white);
+}
+.about-image-cap i {
+  flex: 0 0 auto; font-size: .92rem; color: var(--gold);
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(201,168,76,.16); border: 1px solid rgba(201,168,76,.5);
+  display: flex; align-items: center; justify-content: center;
+}
+.about-image-cap span { display: flex; flex-direction: column; line-height: 1.3; }
+.about-image-cap b { font-family: var(--font-head); font-size: .94rem; font-weight: 800; }
+.about-image-cap span { font-size: .76rem; opacity: .82; }
 .about-image > i {
   position: relative; z-index: 3;
   font-size: clamp(3.4rem, 8vw, 5.4rem);
@@ -1104,6 +1121,10 @@ p { color: var(--gray); }
   flex-wrap: wrap; justify-content: center;
 }
 .wa-only-buttons .btn { flex: 1 1 200px; }
+.wa-only-buttons .btn .wa-num {
+  display: block; font-size: .74rem; font-weight: 600;
+  opacity: .82; letter-spacing: .01em; margin-top: 2px;
+}
 .wa-only-note {
   font-size: .82rem; color: var(--muted, #6b7280);
   display: flex; align-items: center; justify-content: center; gap: 7px;
