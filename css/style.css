@@ -1243,6 +1243,53 @@ p { color: var(--gray); }
 .project-card.hide { display: none; }
 
 /* Before/after */
+/* ---------- 14b. Öne çıkan proje (Mahmudiye / yerden ısıtma) ---------- */
+.featured-project {
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 0;
+  background: var(--white); border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+.fp-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); }
+.fp-shot { position: relative; overflow: hidden; aspect-ratio: 4/3; background: var(--navy); }
+.fp-shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.fp-shot:hover img { transform: scale(1.06); }
+.fp-shot-tag {
+  position: absolute; left: 10px; top: 10px; z-index: 2;
+  font-size: .62rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--navy); background: var(--gold);
+  padding: 4px 9px; border-radius: 4px;
+}
+.fp-shot--alt .fp-shot-tag { background: rgba(255,255,255,.92); }
+
+.fp-body { padding: 38px 36px; display: flex; flex-direction: column; }
+.fp-loc {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: .74rem; font-weight: 700; letter-spacing: .05em;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 14px;
+}
+.fp-body h3 {
+  font-size: clamp(1.3rem, 2.3vw, 1.75rem); line-height: 1.25;
+  margin-bottom: 16px; color: var(--navy);
+}
+.fp-body h3 span { color: var(--gold); }
+.fp-desc { font-size: .94rem; color: var(--text-dark); margin-bottom: 22px; }
+.fp-specs {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px;
+  padding: 20px 0; margin-bottom: 22px;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.fp-spec { display: flex; align-items: flex-start; gap: 9px; }
+.fp-spec i { color: var(--gold); font-size: .82rem; margin-top: 3px; }
+.fp-spec b { display: block; font-size: .84rem; color: var(--navy); font-weight: 700; }
+.fp-spec small { font-size: .74rem; color: var(--gray); }
+.fp-note {
+  font-size: .8rem; color: var(--gray); font-style: italic;
+  padding-left: 14px; border-left: 3px solid var(--gold);
+  margin-bottom: 24px; line-height: 1.6;
+}
+.fp-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto; }
+
 .before-after-section { background: var(--off-white); }
 .before-after-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 .before-after-slider {
@@ -1500,6 +1547,10 @@ p { color: var(--gray); }
   .contact-grid { grid-template-columns: 1fr; }
   .about-content { grid-template-columns: 1fr; gap: 34px; }
   .before-after-container { grid-template-columns: 1fr; }
+  .featured-project { grid-template-columns: 1fr; }
+  .fp-body { padding: 28px 22px; }
+  .fp-gallery { aspect-ratio: 4/3; }
+  .fp-specs { grid-template-columns: 1fr; gap: 12px; }
 }
 
 @media (max-width: 768px) {

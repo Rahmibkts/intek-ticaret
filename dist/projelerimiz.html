@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=2.7">
+  <link rel="stylesheet" href="css/style.css?v=2.8">
 </head>
 <body>
 
@@ -171,31 +171,59 @@
   </section>
 
   <!-- BEFORE / AFTER -->
-  <section class="section before-after-section">
+  <section class="section before-after-section" id="mahmudiye">
     <div class="container">
       <div class="section-title fade-up">
-        <h2>Öncesi / Sonrası</h2>
+        <h2>Sahadan Bir Uygulama</h2>
         <div class="gold-line"></div>
-        <p>Çalışmalarımızın sonuçlarını karşılaştırın</p>
+        <p>Öncesi ve sonrası değil — işin kendisi</p>
       </div>
-      <div class="before-after-container fade-up">
-        <div class="before-after-slider">
-          <div class="ba-layer ba-before"><i class="fas fa-wrench" aria-hidden="true"></i> Eski Tesisat</div>
-          <div class="ba-layer ba-after"><i class="fas fa-check-circle" aria-hidden="true"></i> Yeni Tesisat</div>
-          <div class="ba-divider" role="slider" aria-label="Öncesi sonrası karşılaştırma" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"></div>
-          <div class="ba-labels" aria-hidden="true"><span>Önce</span><span>Sonra</span></div>
+
+      <div class="featured-project fade-up">
+        <div class="fp-gallery">
+          <div class="fp-shot">
+            <span class="fp-shot-tag">Boru Döşemesi</span>
+            <picture>
+              <source srcset="images/projeler/mahmudiye-yerden-isitma-1.webp" type="image/webp">
+              <img src="images/projeler/mahmudiye-yerden-isitma-1.jpg" alt="Mahmudiye İnegöl yerden ısıtma uygulaması — turuncu PEX boruların izolasyon levhası üzerine döşenmesi" loading="lazy" decoding="async" width="1200" height="900">
+            </picture>
+          </div>
+          <div class="fp-shot fp-shot--alt">
+            <span class="fp-shot-tag">Şap Öncesi</span>
+            <picture>
+              <source srcset="images/projeler/mahmudiye-yerden-isitma-2.webp" type="image/webp">
+              <img src="images/projeler/mahmudiye-yerden-isitma-2.jpg" alt="Mahmudiye İnegöl yerden ısıtma — boru döşemesi tamamlanmış, şap öncesi zemin" loading="lazy" decoding="async" width="1200" height="900">
+            </picture>
+          </div>
         </div>
-        <div>
-          <span class="eyebrow">Fark Yaratan İşçilik</span>
-          <h3 style="font-size: clamp(1.3rem, 2.4vw, 1.8rem); margin-bottom: 16px;">Eski ve yeni tesisat arasındaki farkı görün</h3>
-          <p style="margin-bottom: 18px;">Yıllanmış, verimsiz ve arıza çıkaran tesisatlar; doğru boru seçimi, uygun çaplama ve doğru montajla değiştirildiğinde hem enerji tüketimi düşer hem de sistem ömrü uzar.</p>
-          <ul class="tick">
-            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Doğru çap ve malzeme seçimi ile düşen enerji kaybı</li>
-            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Sızdırmazlık testi ve basınç kontrolü</li>
-            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Temiz, düzenli ve etiketli montaj</li>
-            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Uzun ömürlü, garantili sistem</li>
-          </ul>
-          <a href="iletisim.html" class="btn btn-dark" style="margin-top: 24px"><i class="fas fa-camera" aria-hidden="true"></i> Ücretsiz Keşif Talep Et</a>
+
+        <div class="fp-body">
+          <span class="fp-loc"><i class="fas fa-location-dot" aria-hidden="true"></i> Mahmudiye, İnegöl / Bursa</span>
+          <h3>Yerden Isıtma <span>Uygulamamız</span></h3>
+          <p class="fp-desc">
+            Mahmudiye'de, Ortaköy Caddesi üzerindeki bir dairede yerden ısıtma sistemini baştan sona biz kurduk.
+            Zemin hazırlığından izolasyon levhasına, boru döşemesinden kollektör bağlantısına kadar her adımı
+            kendi ekibimiz yaptı. Borular oda oda dengeli ısı dağıtacak şekilde sarmal düzende serildi;
+            dönüş hatları etiketlenerek bırakıldı.
+          </p>
+
+          <div class="fp-specs">
+            <div class="fp-spec"><i class="fas fa-ruler-combined" aria-hidden="true"></i><span><b>Sarmal Döşeme</b><small>Oda bazlı dengeli ısı dağılımı</small></span></div>
+            <div class="fp-spec"><i class="fas fa-layer-group" aria-hidden="true"></i><span><b>Isı İzolasyonu</b><small>Isı yukarı, kayıp aşağı</small></span></div>
+            <div class="fp-spec"><i class="fas fa-water" aria-hidden="true"></i><span><b>PEX Boru Hattı</b><small>Ek yeri yok, kaçak riski düşük</small></span></div>
+            <div class="fp-spec"><i class="fas fa-gauge-high" aria-hidden="true"></i><span><b>Basınç Testi</b><small>Şap öncesi sızdırmazlık kontrolü</small></span></div>
+          </div>
+
+          <p class="fp-note">
+            "Yerden ısıtmanın iyi ya da kötü olduğu borudan değil, döşemeden belli olur.
+            Aynı boruyu yanlış aralıkla serdiğinizde oda ısınmaz; doğru serdiğinizde düşük
+            kazan sıcaklığı bile yeter." — İntek uygulama ekibi
+          </p>
+
+          <div class="fp-actions">
+            <a href="iletisim.html" class="btn btn-gold"><i class="fas fa-calculator" aria-hidden="true"></i> Yerden Isıtma Teklifi Al</a>
+            <a href="https://wa.me/905515341675?text=Merhaba,%20yerden%20%C4%B1s%C4%B1tma%20uygulamas%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="btn btn-dark" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+          </div>
         </div>
       </div>
     </div>
