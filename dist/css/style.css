@@ -1301,6 +1301,7 @@ p { color: var(--gray); }
 }
 .ba-layer { position: absolute; inset: 0; overflow: hidden; }
 .ba-layer img { width: 100%; height: 100%; object-fit: cover; }
+.ba-layer picture { display: block; width: 100%; height: 100%; }
 /* Metin/ikon içeren katmanlar için ortalanmış görünüm */
 .ba-layer {
   display: flex; align-items: center; justify-content: center;
@@ -1317,6 +1318,12 @@ p { color: var(--gray); }
   clip-path: inset(0 0 0 50%);
 }
 .ba-layer i { font-size: clamp(2rem, 4vw, 2.8rem); }
+/* Fotoğraf katmanlarında metin stilini etkisiz bırak */
+.ba-layer:has(img) { background: var(--navy); }
+.ba-layer:has(img)::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to top, rgba(10,18,32,.35), transparent 45%);
+}
 .ba-divider {
   position: absolute; top: 0; bottom: 0; left: 50%;
   width: 3px; background: var(--gold);
