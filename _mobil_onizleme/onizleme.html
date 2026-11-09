@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İntek Ticaret — Mobil Önizleme</title>
+<style>
+  :root{
+    --navy:#0c1a2b; --gold:#c9a84c; --line:#e2e6ec;
+    --ink:#111827; --muted:#5b6472;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:28px 22px 40px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color:var(--ink);
+  }
+  h1{font-size:1.32rem; margin:0 0 6px; letter-spacing:-.01em}
+  .sub{color:var(--muted); font-size:.86rem; margin:0 0 22px; line-height:1.5}
+  .row{display:flex; gap:26px; flex-wrap:wrap; align-items:flex-start}
+  .phone{width:390px; flex:0 0 auto}
+  .phone figcaption{
+    font-size:.8rem; font-weight:700; color:var(--navy);
+    margin-bottom:9px; display:flex; align-items:center; gap:8px;
+  }
+  .phone figcaption span{
+    color:var(--muted); font-weight:500; font-size:.72rem;
+    margin-left:auto;
+  }
+  .phone figcaption b{color:var(--gold); font-size:1rem}
+  .frame{
+    width:390px; height:1100px; overflow-y:auto; overflow-x:hidden;
+    border:9px solid var(--navy); border-radius:26px;
+    background:#fff; box-shadow:0 18px 40px rgba(12,26,43,.18);
+    scrollbar-width:thin;
+  }
+  .frame img{width:100%; display:block}
+  .hint{
+    margin-top:20px; font-size:.76rem; color:var(--muted);
+    border-left:3px solid var(--gold); padding-left:11px; line-height:1.6;
+  }
+</style>
+</head>
+<body>
+  <h1>İntek Ticaret — Mobil önizleme</h1>
+  <p class="sub">390&times;844 gerçek cihaz ölçüsünde alınmış ekran görüntüleri. Her çerçeve kendi içinde kaydırılabilir.</p>
+
+  <div class="row">
+    <figure class="phone">
+      <figcaption><b>1</b> Ana Sayfa <span>index</span></figcaption>
+      <div class="frame"><img src="index.jpg" alt="Mobil ana sayfa"></div>
+    </figure>
+    <figure class="phone">
+      <figcaption><b>2</b> Hizmetlerimiz <span>13 hizmet</span></figcaption>
+      <div class="frame"><img src="hizmetler.jpg" alt="Mobil hizmetler sayfası"></div>
+    </figure>
+    <figure class="phone">
+      <figcaption><b>3</b> Hakkımızda <span>mağaza fotoğrafı</span></figcaption>
+      <div class="frame"><img src="hakkimizda.jpg" alt="Mobil hakkımızda sayfası"></div>
+    </figure>
+    <figure class="phone">
+      <figcaption><b>4</b> Projelerimiz <span>öncesi/sonrası slider</span></figcaption>
+      <div class="frame"><img src="projelerimiz.jpg" alt="Mobil projelerimiz sayfası"></div>
+    </figure>
+    <figure class="phone">
+      <figcaption><b>5</b> İletişim <span>3 kişi + harita</span></figcaption>
+      <div class="frame"><img src="iletisim.jpg" alt="Mobil iletişim sayfası"></div>
+    </figure>
+  </div>
+
+  <p class="hint">Bu beş görüntü, dist/ yayın paketinin gerçek render'ı. Alt sabit çubuk (Ara + Niyazi/Adem/Yusuf), sağdaki yüzen WhatsApp butonları ve "Bize Ulaş" header butonu bu ölçüde çakışmıyor.</p>
+</body>
+</html>
