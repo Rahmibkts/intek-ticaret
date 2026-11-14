@@ -280,3 +280,8 @@ Aşağıdaki CSS sınıfları hiçbir HTML'de kullanılmıyor (önceki tasarım 
 - Yeni kart: *Mahmudiye, Ortaköy Cd — Yerden Isıtma* (Mahmudiye, Ortaköy Cd 7/29, 16400 İnegöl/Bursa). Foto: izolasyon levhası üzerinde turuncu PEX sarmal döşeme. `images/projeler/mahmudiye-ortakoy-yerden-isitma.*` + `-full`.
 - Sıralama değişikliği: gerçek fotoğraflı projeler galerinin **en üstüne** alındı (Mahmudiye → Huzur → Şht. Toygun Aydemir), ikonlu örnek kartlar alta.
 - Deploy + canlı doğrulama: ilk 3 kart gerçek fotoğraf, 1200×750 yüklendi.
+
+### 2026-11-14 (4) — Öncesi/Sonrası bölümü sayfanın en üstüne taşındı
+- `before-after-section` (id=mahmudiye) galeriden **önceye**, sayfa hero'sunun hemen altına alındı.
+- Uyarlamaya gerek çıkmadı: CSS bağımsız; sürükle-bırak + klavye (ok tuşu 50→54) çalışıyor, mobilde tek kolona iniyor, yatay taşma yok.
+- Deploy + canlı doğrulama (masaüstü 1280px + mobil 390px).
