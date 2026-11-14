@@ -258,3 +258,14 @@ Aşağıdaki CSS sınıfları hiçbir HTML'de kullanılmıyor (önceki tasarım 
 | `0224`, `mailto:`, `@gmail`, "e-posta" metni | **0 eşleşme** |
 | Yatay taşma / kırık görsel | 0 / 0 |
 | Kök ↔ `dist` | Yeniden üretildi (`?v=2.2`)|
+
+---
+
+## 2026-11-14 — Projelerimiz: gerçek proje eklendi (Şht. Toygun Aydemir Sk)
+
+- Uydurma kartlardan biri ("Kafe Doğalgaz Dönüşümü") silindi; yerine **gerçek saha fotoğrafıyla** yeni kart kondu:
+  - Başlık: *Şehit Toygun Aydemir Sokak — Doğalgaz Tesisatı*
+  - Açıklama: Şht. Toygun Aydemir Sk No:10 adresinde dış cephe doğal gaz tesisatı uygulaması (ana hat boruları, regülatör ve sayaç bağlantıları, daire içi dağıtım hatları).
+- Fotoğraf: `images/projeler/seyhomer-dogalgaz-tesisati.{jpg,webp}` (kart için 16:10 kırpık 1200×750) + `-full` sürümleri (lightbox için tam kare).
+- `js/main.js` lightbox'a küçük iyileştirme: kart görselinin `-full` sürümü sunucuda varsa lightbox'ta o gösteriliyor (HEAD kontrolüyle; yoksa kırpık kalır).
+- Kök ↔ `dist` yeniden üretildi, Cloudflare Workers'a deploy edildi; canlıda kart + görsel + lightbox doğrulandı.

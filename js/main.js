@@ -510,12 +510,17 @@
             lbImg = document.createElement('img');
             lbBody.insertBefore(lbImg, lbBody.firstChild);
           }
-          /* Kart küçültülmüş (16:10 kırpık) gösterim görselini kullanır;
-             lightbox'ta mümkünse tam (-full) sürümü göster. */
+          /* Kartlar kırpık (16:10) gösterim görseli kullanır; lightbox'ta
+             tam sürüm varsa (-full) onu göster, yoksa kırpığı olduğu gibi bırak. */
           lbImg.src = realImage.currentSrc || realImage.src;
-          if (/-dogalgaz-tesisati\.jpg$/.test(lbImg.src)) {
-            lbImg.src = lbImg.src.replace(/\.jpg$/, '-full.jpg');
-          }
+          (function (u) {
+            var m = u.match(/^(.*\/)(.+?)\.(jpg|webp)(\?[^#]*)?$/i);
+            if (!m) return;
+            var full = m[1] + m[2] + '-full.' + m[3] + (m[4] || '');
+            fetch(full, { method: 'HEAD' }).then(function (res) {
+              if (res.ok) lbImg.src = full;
+            }).catch(function () {});
+          })(lbImg.src);
           lbImg.alt = realImage.alt || (title ? title.textContent : 'Proje görseli');
           lbImg.style.display = '';
           lbIconBox.hidden = true;

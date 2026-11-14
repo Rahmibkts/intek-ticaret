@@ -510,7 +510,17 @@
             lbImg = document.createElement('img');
             lbBody.insertBefore(lbImg, lbBody.firstChild);
           }
-          lbImg.src = realImage.src;
+          /* Kartlar kırpık (16:10) gösterim görseli kullanır; lightbox'ta
+             tam sürüm varsa (-full) onu göster, yoksa kırpığı olduğu gibi bırak. */
+          lbImg.src = realImage.currentSrc || realImage.src;
+          (function (u) {
+            var m = u.match(/^(.*\/)(.+?)\.(jpg|webp)(\?[^#]*)?$/i);
+            if (!m) return;
+            var full = m[1] + m[2] + '-full.' + m[3] + (m[4] || '');
+            fetch(full, { method: 'HEAD' }).then(function (res) {
+              if (res.ok) lbImg.src = full;
+            }).catch(function () {});
+          })(lbImg.src);
           lbImg.alt = realImage.alt || (title ? title.textContent : 'Proje görseli');
           lbImg.style.display = '';
           lbIconBox.hidden = true;
