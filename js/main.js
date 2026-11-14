@@ -581,6 +581,42 @@
       });
     }
 
+    /* ---------- 13b. Mobil "Hemen Ara" — 3 kişilik telefon seçici ---------- */
+    (function () {
+      var toggle = document.querySelector('.call-toggle');
+      var picker = document.querySelector('.call-picker');
+      if (!toggle || !picker) return;
+
+      function closePicker() {
+        picker.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+      function openPicker() {
+        picker.hidden = false;
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (picker.hidden) openPicker(); else closePicker();
+      });
+
+      /* Seçicinin dışına tıklayınca kapat */
+      document.addEventListener('click', function (e) {
+        if (picker.hidden) return;
+        if (!picker.contains(e.target) && !toggle.contains(e.target)) closePicker();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !picker.hidden) { closePicker(); toggle.focus(); }
+      });
+
+      /* Kişi seçilince seçici kapansın */
+      picker.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { setTimeout(closePicker, 120); });
+      });
+    })();
+
     /* ---------- 14. Anchor yumuşak kaydırma ---------- */
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {

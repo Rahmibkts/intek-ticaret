@@ -59,8 +59,8 @@ if os.path.isdir(imgdir):
 
 for p in PAGES:
     html = open(os.path.join(ROOT, p), encoding="utf-8").read()
-    html = re.sub(r"style\.css\?v=[\d.]+", "style.css?v=3.6", html)
-    html = re.sub(r"main\.js\?v=[\d.]+", "main.js?v=2.6", html)
+    html = re.sub(r"style\.css\?v=[\d.]+", "style.css?v=3.7", html)
+    html = re.sub(r"main\.js\?v=[\d.]+", "main.js?v=2.7", html)
     open(os.path.join(DIST, p), "w", encoding="utf-8", newline="\n").write(html)
 
 total = 0
