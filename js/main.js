@@ -510,7 +510,12 @@
             lbImg = document.createElement('img');
             lbBody.insertBefore(lbImg, lbBody.firstChild);
           }
-          lbImg.src = realImage.src;
+          /* Kart küçültülmüş (16:10 kırpık) gösterim görselini kullanır;
+             lightbox'ta mümkünse tam (-full) sürümü göster. */
+          lbImg.src = realImage.currentSrc || realImage.src;
+          if (/-dogalgaz-tesisati\.jpg$/.test(lbImg.src)) {
+            lbImg.src = lbImg.src.replace(/\.jpg$/, '-full.jpg');
+          }
           lbImg.alt = realImage.alt || (title ? title.textContent : 'Proje görseli');
           lbImg.style.display = '';
           lbIconBox.hidden = true;
