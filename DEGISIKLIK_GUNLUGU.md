@@ -275,3 +275,8 @@ Aşağıdaki CSS sınıfları hiçbir HTML'de kullanılmıyor (önceki tasarım 
 - Adres: Huzur Mh., 28. Sk. No:6, 16400 İnegöl/Bursa. Foto: izolasyon levhası üzerinde sarmal PEX döşeme.
 - Görseller: `images/projeler/huzur-yerden-isitma.{jpg,webp}` + `-full` (lightbox).
 - dist üretildi, Workers'a deploy edildi, canlıda her iki gerçek fotoğraf kartı doğrulandı.
+
+### 2026-11-14 (3) — Üçüncü gerçek proje + sıralama
+- Yeni kart: *Mahmudiye, Ortaköy Cd — Yerden Isıtma* (Mahmudiye, Ortaköy Cd 7/29, 16400 İnegöl/Bursa). Foto: izolasyon levhası üzerinde turuncu PEX sarmal döşeme. `images/projeler/mahmudiye-ortakoy-yerden-isitma.*` + `-full`.
+- Sıralama değişikliği: gerçek fotoğraflı projeler galerinin **en üstüne** alındı (Mahmudiye → Huzur → Şht. Toygun Aydemir), ikonlu örnek kartlar alta.
+- Deploy + canlı doğrulama: ilk 3 kart gerçek fotoğraf, 1200×750 yüklendi.
