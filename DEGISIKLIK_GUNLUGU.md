@@ -269,3 +269,9 @@ Aşağıdaki CSS sınıfları hiçbir HTML'de kullanılmıyor (önceki tasarım 
 - Fotoğraf: `images/projeler/seyhomer-dogalgaz-tesisati.{jpg,webp}` (kart için 16:10 kırpık 1200×750) + `-full` sürümleri (lightbox için tam kare).
 - `js/main.js` lightbox'a küçük iyileştirme: kart görselinin `-full` sürümü sunucuda varsa lightbox'ta o gösteriliyor (HEAD kontrolüyle; yoksa kırpık kalır).
 - Kök ↔ `dist` yeniden üretildi, Cloudflare Workers'a deploy edildi; canlıda kart + görsel + lightbox doğrulandı.
+
+### 2026-11-14 (2) — Projelerimiz: Huzur Mah. yerden ısıtma eklendi
+- Galerideki ikonlu kartların yanına **gerçek fotoğraf** ile yeni kart: *Huzur Mahallesi — Yerden Isıtma*
+- Adres: Huzur Mh., 28. Sk. No:6, 16400 İnegöl/Bursa. Foto: izolasyon levhası üzerinde sarmal PEX döşeme.
+- Görseller: `images/projeler/huzur-yerden-isitma.{jpg,webp}` + `-full` (lightbox).
+- dist üretildi, Workers'a deploy edildi, canlıda her iki gerçek fotoğraf kartı doğrulandı.
