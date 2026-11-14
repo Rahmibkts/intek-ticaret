@@ -1093,8 +1093,6 @@ p { color: var(--gray); }
     linear-gradient(145deg, var(--navy-mid), var(--navy));
 }
 .service-detail-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
-.service-detail-image img[src*="temiz-su"] { object-position: 82% 34%; }
-.service-detail-image img[src*="pis-su"] { object-position: 50% 42%; }
 .service-detail:hover .service-detail-image img { transform: scale(1.06); }
 .service-detail-image i {
   position: relative; z-index: 1;
